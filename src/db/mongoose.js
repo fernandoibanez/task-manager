@@ -1,8 +1,8 @@
 const mongoose = require('mongoose')
 
-mongoose.connect('mongodb+srv://fibanez:cEpYfVNmVnB7@cluster43611.hla2ngx.mongodb.net', {
+mongoose.connect(process.env.MONGODB_URL, {
     useNewUrlParser: true,
-    dbName: 'task-manager'
+    dbName: process.env.MONGODB_DB_NAME
 })
 
 //console.log(mongoose.Connection)
